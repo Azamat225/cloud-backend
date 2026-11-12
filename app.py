@@ -34,6 +34,11 @@ def stats():
 def echo():
     data = request.get_json(silent=True) or {}
     return jsonify({"you_sent": data})
+
+@app.get("/hello")
+ def hello():
+     name = request.args.get("name", "гость")
+     return jsonify({"hello": name})
  
  
 if __name__ == "__main__":
