@@ -36,7 +36,7 @@ def echo():
     return jsonify({"you_sent": data})
 
 @app.get("/hello")
- def hello():
+def hello():
      name = request.args.get("name", "гость")
      return jsonify({"hello": name})
  
